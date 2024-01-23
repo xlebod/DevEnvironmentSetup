@@ -19,6 +19,10 @@ function global:Install-Git {
 
 # Sets up terminal environment and style:
 # 
+# New Profiles:
+#  -> PowerShell 7 (Default, launched as root)
+#  -> Git Bash
+#
 # Color theme:
 #   -> Wez (https://windowsterminalthemes.dev/?theme=Wez)
 # 
@@ -179,6 +183,8 @@ Set-Alias tere Invoke-Tere
 function global:Install-All {
     global:Set-UnrestrictedPolicy
     global:Install-Chocolatey
+    global:Install-PowerShell7
+    global:Install-Git
     global:Install-Terminal
     global:Install-Apps
     # global:Install-VisualStudio
