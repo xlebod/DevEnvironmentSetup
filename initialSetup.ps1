@@ -9,6 +9,14 @@ function global:Install-Chocolatey {
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')); 
 }
 
+function global:Install-PowerShell7 {
+    winget install --id Microsoft.Powershell --source winget
+}
+
+function global:Install-Git {
+    choco install git -y
+}
+
 # Sets up terminal environment and style:
 # 
 # Color theme:
@@ -63,7 +71,6 @@ function global:Install-Terminal {
 #   -> VLC Media Player
 function global:Install-Apps {
     choco install googlechrome -y
-    choco install git -y
     choco install nvm -y
     choco install vscode -y
     choco install 7zip -y
