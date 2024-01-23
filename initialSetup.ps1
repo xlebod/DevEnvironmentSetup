@@ -1,4 +1,6 @@
+# Installation directory for various files
 $global:DownloadBasePath = "~\Downloads\"
+
 function global:Set-UnrestrictedPolicy {
     Set-ExecutionPolicy Unrestricted;
 }
@@ -9,7 +11,15 @@ function global:Install-Chocolatey {
 
 # Sets up terminal environment and style:
 # 
-# Color theme
+# Color theme:
+#   -> Wez (https://windowsterminalthemes.dev/?theme=Wez)
+# 
+# Addons: 
+#  -> oh-my-posh
+#  -> posh-get
+#
+# oh-my-posh theme:
+#  -> kushal (https://ohmyposh.dev/docs/themes#kushal)
 function global:Install-Terminal {
     # Install Oh my posh & posh-git
     choco install oh-my-posh -y
