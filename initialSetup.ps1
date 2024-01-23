@@ -11,7 +11,7 @@ function global:Install-Terminal {
     choco install oh-my-posh -y
     Install-Module posh-git
 
-    # Install Commit mono font   
+    # Install Cascadia Cove Nerd font   
     $fontZip = "~\Downloads\CascadiaCode.zip"
     $fontFolder = "~\Downloads\CascadiaCode"
     $fontFile = "$($fontFolder)\CaskaydiaCoveNerdFontMono-SemiBold.ttf"
