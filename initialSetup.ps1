@@ -72,13 +72,18 @@ function global:Install-Terminal {
 #   -> NVM
 #   -> Visual Studio Code
 #   -> 7-Zip
+# Optional:
 #   -> VLC Media Player
+#   -> .NET SDK 5.0.100
+
 function global:Install-Apps {
     choco install googlechrome -y
     choco install nvm -y
     choco install vscode -y
     choco install 7zip -y
-    choco install vlc -y
+    choco install kdiff3
+    # choco install vlc -y
+    # choco install dotnet-sdk --version=5.0.100
 }
 
 # Installs Visual Studio 2022 Professional with worflows:
@@ -178,7 +183,15 @@ Set-Alias tere Invoke-Tere
     }
 }
 
+function global:Set-GitMergeAndDiffToolAsKdiff3 {
+    git config --global merge.tool kdiff3
+    git config --global mergetool.kdiff3.path "C:/Program Files/KDiff3/bin/kdiff3.exe"
+    git config --global mergetool.kdiff3.trustExitCode false
 
+    git config --global diff.guitool kdiff3
+    git config --global difftool.kdiff3.path "C:/Program Files/KDiff3/bin/kdiff3.exe"
+    git config --global difftool.kdiff3.trustExitCode false
+}
 
 function global:Install-All {
     global:Set-UnrestrictedPolicy
