@@ -203,4 +203,5 @@ function global:Install-All {
     # global:Install-VisualStudio
     # global:Install-Rider
     # global:Setup-Tere   # DO NOT ENABLE THIS UNLESS YOU HAVE COMPLETED THE PREREQUISITES!
+    # global:Set-GitMergeAndDiffToolAsKdiff3
 }
