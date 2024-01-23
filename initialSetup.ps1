@@ -78,7 +78,7 @@ function global:Install-VisualStudio {
     winget install --id $visualStudioId --override "--passive --config $($vsConfigPath)"
 }
 
-# Silently installs Rider
+# Silently installs Rider 2023.3.3
 # Left over files: 
 #   ->  ~\Downloads\rider.exe (~800MB)
 #   -> Temp file: %temp%\silent.config
