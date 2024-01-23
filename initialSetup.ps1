@@ -32,7 +32,7 @@ function global:Install-Terminal {
 
     # Change setting of Windows Terminal
     $terminalsConfigJson = "$($env:LOCALAPPDATA)\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-    Set-Content -Path $terminalsConfigJson ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/xlebod/TerminalConfig/main/settings.json'))
+    Set-Content -Path $terminalsConfigJson ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/xlebod/DevEnvironmentSetup/main/settings.json'))
 
     # Initiate posh-git with correct theme
     if(-not((Get-Content $PROFILE -Raw) -like '*oh-my-posh*')){
