@@ -43,5 +43,5 @@ function global:Install-Terminal {
 function global:Install-All {
     global:Set-UnrestrictedPolicy
     global:Install-Chocolatey
-    global:InstallTerminal
+    global:Install-Terminal
 }
