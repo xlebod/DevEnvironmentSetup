@@ -58,7 +58,7 @@ function global:Install-Terminal {
 
     # Initiate posh-git with correct theme
     if(-not((Get-Content $PROFILE -Raw) -like '*oh-my-posh*')){
-        Add-Content -Path $PROFILE "oh-my-posh init pwsh --config '$($env:POSH_THEMES_PATH)\kushal.omp.json' | Invoke-Expression"
+        Add-Content -Path $PROFILE "`r`n oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/kushal.omp.json' | Invoke-Expression"
         Add-Content -Path $PROFILE "Import-Module posh-git"
     }
 
